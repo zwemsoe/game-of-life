@@ -60,7 +60,11 @@ function App() {
                 min='30'
                 max='120'
                 value={width}
-                onChange={(e) => setWidth(e.target.value)}
+                onChange={(e) =>
+                  e.target.value >= 30 &&
+                  e.target.value <= 120 &&
+                  setWidth(e.target.value)
+                }
                 style={{ marginRight: "10px" }}
               />
               <label style={{ color: "white" }}>Height: </label>
@@ -68,7 +72,11 @@ function App() {
                 name='height'
                 type='number'
                 value={height}
-                onChange={(e) => setHeight(e.target.value)}
+                onChange={(e) => {
+                  e.target.value >= 30 &&
+                    e.target.value <= 500 &&
+                    setHeight(e.target.value);
+                }}
                 min='30'
                 max='500'
                 style={{ marginRight: "10px" }}
