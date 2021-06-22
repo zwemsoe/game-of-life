@@ -54,7 +54,7 @@ export default function Board({ width, height }) {
   const handleRandom = () => {
     const total = Math.floor((width * height) / 4);
     let count = 0;
-    let copy = [...board];
+    let copy = [...createBoard(width, height)];
 
     while (count <= total) {
       const xCoord = Math.floor(Math.random() * height);
